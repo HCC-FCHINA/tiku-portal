@@ -1,0 +1,48 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<!--web浮动广告-->
+<div class="ad" th:fragment="ad">
+	<div id="float_ad" th:if="${a.businessKey == 'floatAd'}" th:each="a,aStat:${adList}" style="position: fixed;z-index: 10000;left: 20px;bottom: 350px;">
+		<div class="img-list" th:each="ad,adStat:${a.ads}">
+			<a th:attr="data-href=${ad.href},data-index=${ad.index}" class="banner-link img-1" th:href="${ad.href}" >
+				<img th:src="${domainName + ad.bgimage}" style="width: 100px;height: 150px;">
+			</a>
+		</div>
+	</div>
+</div>
+<!--web浮动广告结束-->
+
+<!--mobile轮播-->
+<link rel="stylesheet" th:inline="javascript" th:fragment="ad_banner" th:href="${domainName + 'layui/css/layui.css'}" media="all">
+
+<div class="ad_banner" th:fragment="ad_banner">
+	<div class="ad_banner" th:if="${a.businessKey == 'indexBanner'}" th:each="a,aStat:${adList}">
+		<div class="layui-carousel" id="lunbo">
+			<div carousel-item="">
+				<div class="img-list" th:each="ad,adStat:${a.ads}">
+					<a th:attr="data-href=${ad.href},data-index=${ad.index}" class="banner-link img-1"
+					   th:href="${ad.href}" >
+						<div th:style="${'background-image:url(' + ad.bgimage + ');'}" class="banner-pic"></div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" th:inline="javascript" th:fragment="ad_banner" th:src="${domainName + 'layui/layui.js'}" charset="utf-8"></script>
+<script type="text/javascript" th:inline="javascript" th:fragment="ad_banner">
+    layui.use(['carousel', 'form'], function () {
+        var carousel = layui.carousel
+            , form = layui.form;
+        //图片轮播
+        carousel.render({
+            elem: '#lunbo'
+            , width: '100%'
+            , height: '200px'
+            , interval: 3000
+            , arrow: 'hover'
+            // , indicator: 'outside'
+        });
+    });
+</script>
+<!--mobile轮播结束-->

@@ -1,0 +1,104 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<div class="footer" th:fragment="footer">
+    <!--<div class="footer-contain clearfix">
+        <div class="intro">
+            <div class="title">超凡题库</div>
+            <p>
+                超凡题库旨在为各位考生提供全面详细的试题及解析，让学员可以少花钱，多做题！
+            </p>
+        </div>
+        <div class="connect">
+            <div class="title">联系我们</div>
+            <p>
+                <i class="iconfont icon-yonghu"></i> 胡先生
+            </p>
+            <p>
+                <i class="iconfont icon-mail"></i> 1121788295@qq.com
+            </p>
+            &lt;!&ndash;<p>
+                <i class="iconfont icon-qq"></i> qq：1121788295
+            </p>&ndash;&gt;
+        </div>
+        <div class="suggest">
+        <div class="title">qq群</div>
+        <p>
+        <img style="width:80px;height:80px;" alt="qq群" th:src="${domainName + 'images/qqq.jpg'}">
+        </p>
+        </div>
+        <div class="cooperation">
+            <div class="title">合作机构</div>
+            <span class="left iconfont icon-xiangzuo1"></span> <span
+                class="right iconfont icon-xiangyou1"></span>
+            <div class="coo-view clearfix">
+                <ul class="contain-ul dis-none" style="display: block;">
+                    <li class="contain-li"><a class="contain-link"
+                                              href="http://cn.baiwanzhan.com" style="color:#fff;" target="_blank"
+                                              title="百万站官网">百万站网站导航</a>
+                    </li>
+                    <li class="contain-li"><a class="contain-link"
+                                              href="http://www.ziyuangou.com" style="color:#fff;" target="_blank"
+                                              title="资源狗">资源狗</a>
+                    </li>
+                    <li class="contain-li"><a class="contain-link" style="color:#fff;"
+                                              href="http://novel.chaofantk.com" target="_blank"
+                                              title="超凡题库">超凡阅读</a>
+                    </li>
+                    <li class="contain-li"><a class="contain-link"
+                                              href="http://www.v-shark.com.cn/" style="color:#fff;" target="_blank"
+                                              title="商务口语">商务口语</a>
+                    </li>
+                    <li class="contain-li"><a class="contain-link"
+                                              href="http://www.sanjingedu.com" style="color:#fff;" target="_blank"
+                                              title="消防工程师培训">成人职业资格考前培训</a>
+                    </li>
+                    <li class="contain-li"><a class="contain-link"
+                                              href="http://www.jinegg.net" style="color:#fff;" target="_blank"
+                                              title="上海学英语">上海学英语</a>
+                    </li>
+                    <li class="contain-li"><a class="contain-link"
+                                              href="http://www.tczx120.com" style="color:#fff;" target="_blank"
+                                              title="无锡诚得驾校">无锡诚得驾校</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>-->
+    <p class="bottom">
+    备案号 <a href="http://www.miitbeian.gov.cn" target="_blank">皖ICP备19004024号</a> Copyright © 2018 CHAOFAN
+    </p>
+
+
+</div>
+
+<script type="text/javascript" th:inline="javascript" th:fragment="footer">
+    //百度统计
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?4fc0226ae32148cc914ff05f47cb1a75";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+
+    // 百度推送
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+
+    // 360搜索自动推送  www.tamguo.com&ndash;&gt;
+    // (function(){
+    // var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?40ee03bede7c19e05d89f18db868df8a":"https://jspassport.ssl.qhimg.com/11.0.1.js?40ee03bede7c19e05d89f18db868df8a";
+    // document.write('<script src="' + src + '" id="sozz"><\/script>');
+    // })();
+</script>
+
